@@ -1,5 +1,7 @@
+thesis.pdf
+
 ## Latex files
-Theses.synctex.gz
+*.synctex.gz
 *~
 *.aux
 *.out

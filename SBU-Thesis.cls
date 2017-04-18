@@ -205,6 +205,7 @@
 } % end of firstPage
 
 
+
 \def\titlepage{\newpage\centering
 	\thispagestyle{empty}
 	\parindent 0pt \parskip 10pt plus 1fil minus 1fil
@@ -214,7 +215,36 @@
 
 
 
+%%%%%%%%%%%%%%%%%% صفحه چکیده
+\newcommand\abstractPage
+{
+	\newpage
+	\thispagestyle{plain}
+	\vskip 15mm
+	{\noindent\bfseries \hfil \large چکیده}
+	\vspace{5mm}
+	\par
+	\noindent
+	\@fa-abstract
+	\vspace{8mm}
+	\par
+	\noindent
+	\ifdefined\@keywords
+	{
+		\textbf{واژگان کلیدی:} 
+		\@keywords
+	}
+	\fi
+	\newpage
+}
+%%%%%%%%%%%%%%%%%%%%%%%
 
+
+\pagenumbering{adadi}
+\let\ol@chapter\@chapter
+\def\@chapter{%
+	\ifnum\c@chapter=0 \pagenumbering{arabic}\setcounter{page}{1}\fi
+	\ol@chapter}
 
 
 %nkhComment
@@ -229,6 +259,16 @@
 	\thispagestyle{empty}
 	\newpage
 	\if@twocolumn\hbox{}\newpage\fi\fi\fi}
+
+
+\newcommand{\cchapter}[1]
+{
+	\chapter[#1]{\centering #1}
+	\thispagestyle{empty} % حذف شماره صفحه
+	\pagebreak
+}
+
+
 
 %% Distributable under the LaTeX Project Public License,
 %% version 1.3c or higher (your choice). The latest version of

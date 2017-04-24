@@ -343,7 +343,7 @@
 
 
 % دستوری برای تغییر نام کلمه «کتاب‌نامه» به «مراجع»
-\renewcommand{\bibname}{\hfil  مراجع}
+\renewcommand{\bibname}{مراجع}
 %\renewcommand{\bibname}{\normalsize \begin{center} مراجع \end{center}}
 % دستوری برای تعریف واژه‌نامه انگلیسی به فارسی
 \newcommand\persiangloss[2]{#1\dotfill\lr{#2}\\}

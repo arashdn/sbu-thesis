@@ -270,6 +270,92 @@
 
 
 
+
+%%%%%%Commands
+
+%تنظیم حاشیه صفحات
+\usepackage[top=35mm, bottom=30mm, left=25mm, right=30mm]{geometry}
+
+\usepackage{titlesec} % ایجاد فاصله بین عناوین و خط مطلب بعدی
+
+\usepackage {indentfirst}
+\usepackage{multirow}
+% در ورژن جدید زی‌پرشین برای تایپ متن‌های ریاضی، این سه بسته، حتماً باید فراخوانی شود
+\usepackage{amsthm,amssymb,amsmath}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%تنطیمات خط بالایی صفحه
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+
+\lhead{}
+% Length to control the \fancyheadoffset and the calculation of \headline
+% simultaneously
+\newlength\FHoffset
+\setlength\FHoffset{0cm} %بیشتر بودن خط بالا از حاشیه کناری صفحه
+
+\addtolength\headwidth{2\FHoffset}
+
+\fancyheadoffset{\FHoffset}
+
+% these lengths will control the headrule trimming to the left and right 
+\newlength\FHleft
+\newlength\FHright
+
+% here the trimmings are controlled by the user
+\setlength\FHleft{1cm}
+\setlength\FHright{0cm}
+
+\lhead{\thepage} % نمایش شماره صفحه در سمت راست هدر
+\cfoot{} % نمایش ندادن شماره صفحه در پایین صفحه
+
+% The new definition of headrule that will take into acount the trimming(s)
+\newbox\FHline
+\setbox\FHline=\hbox{\hsize=\paperwidth%
+	\hspace*{\FHleft}%
+	\rule{\dimexpr\headwidth-\FHleft-\FHright\relax}{\headrulewidth}\hspace*{\FHright}%
+}
+
+\linespread{1.3} % تنظیم فاصله خطوط به 1.5
+
+%\renewcommand\headrule{\vskip-0.2\baselineskip\copy\FHline}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\usepackage[perpage]{footmisc} %شروع شماره زیرنویس ها از ۱ در هر صفحه
+
+\setlength{\skip\footins}{1cm} %تنظیم فاصله متن تا خط زیرنویس
+
+
+\usepackage{graphicx}
+\usepackage{xepersian}
+
+%\usepackage{persian-bib}
+
+
+
+\settextfont[Scale=1]{IRMitra}
+\setlatintextfont[Scale=1]{IRMitra}
+\defpersianfont\titlefont[Scale=0.857]{IRTitr}
+
+
+
+% دستوری برای تغییر نام کلمه «کتاب‌نامه» به «مراجع»
+\renewcommand{\bibname}{\hfil  مراجع}
+%\renewcommand{\bibname}{\normalsize \begin{center} مراجع \end{center}}
+% دستوری برای تعریف واژه‌نامه انگلیسی به فارسی
+\newcommand\persiangloss[2]{#1\dotfill\lr{#2}\\}
+% دستوری برای تعریف واژه‌نامه فارسی به انگلیسی 
+\newcommand\englishgloss[2]{#2\dotfill\lr{#1}\\}
+
+
+
+
+
+
+
 %% Distributable under the LaTeX Project Public License,
 %% version 1.3c or higher (your choice). The latest version of
 %% this license is at: http://www.latex-project.org/lppl.txt

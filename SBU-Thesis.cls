@@ -277,6 +277,12 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 \usepackage[top=35mm, bottom=30mm, left=25mm, right=25mm]{geometry}
 
 \usepackage{titlesec} % ایجاد فاصله بین عناوین و خط مطلب بعدی
+\titlespacing*{\section} {0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
+\titlespacing*{\subsection} {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\titlespacing*{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+%\titlespacing*{\paragraph} {0pt}{3.25ex plus 1ex minus .2ex}{1em}
+%\titlespacing*{\subparagraph} {\parindent}{3.25ex plus 1ex minus .2ex}{1em}
+
 
 \usepackage {indentfirst}
 \usepackage{multirow}

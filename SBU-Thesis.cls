@@ -22,8 +22,8 @@
 %% 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{SBU-Thesis}
-              [4/14/2017 v0.1
- Persian thesis document class in XeLaTeX for Shahid Beheshti University projects/theses/dissertations]
+[4/14/2017 v0.1
+Persian thesis document class in XeLaTeX for Shahid Beheshti University projects/theses/dissertations]
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions
 \LoadClass[a4paper,12pt]{book}
@@ -87,26 +87,26 @@
 
 \ifx\@projectLabel\undefined%
 {
-\if@mscthesis
-{\projectLabel{پایان‌نامه کارشناسی ارشد}}
-\else
-  \if@mscthesisReport
-   {\projectLabel{گزارش سمینار کارشناسی ارشد }}
-  \else
-{\projectLabel{رساله}}
-\fi\fi
+	\if@mscthesis
+	{\projectLabel{پایان‌نامه کارشناسی ارشد}}
+	\else
+	\if@mscthesisReport
+	{\projectLabel{گزارش سمینار کارشناسی ارشد }}
+	\else
+	{\projectLabel{رساله}}
+	\fi\fi
 }\fi
 
 \ifx\@degree\undefined%
 {
-\if@mscthesis
-\degree{کارشناسی ارشد}
-\else
-\if@mscthesisReport
-\degree{کارشناسی ارشد}
-\else
-\degree{دکتری}
-\fi\fi
+	\if@mscthesis
+	\degree{کارشناسی ارشد}
+	\else
+	\if@mscthesisReport
+	\degree{کارشناسی ارشد}
+	\else
+	\degree{دکتری}
+	\fi\fi
 }
 
 
@@ -274,7 +274,7 @@
 %%%%%%Commands
 
 %تنظیم حاشیه صفحات
-\usepackage[top=35mm, bottom=30mm, left=25mm, right=30mm]{geometry}
+\usepackage[top=35mm, bottom=30mm, left=25mm, right=25mm]{geometry}
 
 \usepackage{titlesec} % ایجاد فاصله بین عناوین و خط مطلب بعدی
 
@@ -317,7 +317,7 @@
 	\rule{\dimexpr\headwidth-\FHleft-\FHright\relax}{\headrulewidth}\hspace*{\FHright}%
 }
 
-\linespread{1.3} % تنظیم فاصله خطوط به 1.5
+\linespread{2} % تنظیم فاصله خطوط به 1.5
 
 %\renewcommand\headrule{\vskip-0.2\baselineskip\copy\FHline}
 
@@ -336,8 +336,8 @@
 
 
 
-\settextfont[Scale=1]{IRMitra}
-\setlatintextfont[Scale=1]{IRMitra}
+\settextfont[Scale=1.15]{IRNazanin}
+\setlatintextfont[Scale=1.15]{IRNazanin}
 \defpersianfont\titlefont[Scale=0.857]{IRTitr}
 
 

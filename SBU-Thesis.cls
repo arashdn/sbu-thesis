@@ -276,13 +276,24 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 %تنظیم حاشیه صفحات
 \usepackage[top=35mm, bottom=30mm, left=25mm, right=25mm]{geometry}
 
-\usepackage{titlesec} % ایجاد فاصله بین عناوین و خط مطلب بعدی
-\titlespacing*{\section} {0pt}{3.5ex plus 1ex minus .2ex}{2.3ex plus .2ex}
-\titlespacing*{\subsection} {0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
-\titlespacing*{\subsubsection}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
-%\titlespacing*{\paragraph} {0pt}{3.25ex plus 1ex minus .2ex}{1em}
-%\titlespacing*{\subparagraph} {\parindent}{3.25ex plus 1ex minus .2ex}{1em}
+\usepackage[bottomtitles]{titlesec} % ایجاد فاصله بین عناوین و خط مطلب بعدی
 
+
+%\titleformat{,〈,command,〉,}[,〈,shape,〉,]{,〈,format,〉,}{,〈,label,〉,}{,〈,sep,〉,}{,〈,before-code,〉,}[,〈,after-code,〉,]
+\titleformat{\section}
+{\normalfont\Large\bfseries}{\thesection}{1em}{}
+\titleformat{\subsection}
+{\normalfont\large\bfseries}{\thesubsection}{1em}{}
+\titleformat{\subsubsection}
+{\normalfont\normalsize\bfseries}{\thesubsubsection}{1em}{}
+\titleformat{\paragraph}[runin]
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titleformat{\subparagraph}[runin]
+{\normalfont\normalsize\bfseries}{\thesubparagraph}{1em}{}
+
+\titlespacing\section{0pt}{22pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{18pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing\subsubsection{0pt}{16pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
 
 \usepackage {indentfirst}
 \usepackage{multirow}
@@ -329,9 +340,9 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage[perpage]{footmisc} %شروع شماره زیرنویس ها از ۱ در هر صفحه
+\usepackage[perpage,bottom]{footmisc} % شروع شماره زیرنویس ها از ۱ در هر صفحه و انتقال به پایین
 
-\setlength{\skip\footins}{1cm} %تنظیم فاصله متن تا خط زیرنویس
+\setlength{\skip\footins}{16pt} %تنظیم فاصله متن تا خط زیرنویس
 
 
 

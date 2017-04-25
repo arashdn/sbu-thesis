@@ -274,7 +274,7 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 %%%%%%Commands
 
 %تنظیم حاشیه صفحات
-\usepackage[top=35mm, bottom=30mm, left=25mm, right=25mm]{geometry}
+\usepackage[top=35mm, bottom=25mm, left=25mm, right=25mm]{geometry}
 
 \usepackage[bottomtitles]{titlesec} % ایجاد فاصله بین عناوین و خط مطلب بعدی
 
@@ -340,11 +340,9 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage[perpage,bottom]{footmisc} % شروع شماره زیرنویس ها از ۱ در هر صفحه و انتقال به پایین
-
-\setlength{\skip\footins}{16pt} %تنظیم فاصله متن تا خط زیرنویس
-
-
+\usepackage[perpage,bottom,hang,flushmargin]{footmisc} % شروع شماره زیرنویس ها از ۱ در هر صفحه و انتقال به پایین
+\setlength{\footnotemargin}{5pt}
+\setlength{\skip\footins}{12pt} %تنظیم فاصله متن تا خط زیرنویس
 
 % بسته‌ و دستوراتی برای ایجاد لینک‌های رنگی با امکان جهش
 %\usepackage[pagebackref=false,colorlinks,linkcolor=blue,citecolor=blue]{hyperref}

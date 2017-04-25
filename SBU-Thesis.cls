@@ -323,10 +323,20 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-
 \usepackage[perpage]{footmisc} %شروع شماره زیرنویس ها از ۱ در هر صفحه
 
 \setlength{\skip\footins}{1cm} %تنظیم فاصله متن تا خط زیرنویس
+
+
+
+% بسته‌ و دستوراتی برای ایجاد لینک‌های رنگی با امکان جهش
+%\usepackage[pagebackref=false,colorlinks,linkcolor=blue,citecolor=blue]{hyperref}
+% چنانچه قصد پرینت گرفتن نوشته خود را دارید، خط بالا را غیرفعال و  از دستور زیر استفاده کنید چون در صورت استفاده از دستور زیر‌‌، 
+% لینک‌ها به رنگ سیاه ظاهر خواهند شد که برای پرینت گرفتن، مناسب‌تر است
+\usepackage[pagebackref=false]{hyperref}
+
+\usepackage{bookmark} % برای اضافه کردن لینک‌های کنار pdf و همینطور لینک شدن رفرنس و زیرنویس‌ها
+
 
 
 \usepackage{graphicx}
@@ -349,8 +359,6 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 \newcommand\persiangloss[2]{#1\dotfill\lr{#2}\\}
 % دستوری برای تعریف واژه‌نامه فارسی به انگلیسی 
 \newcommand\englishgloss[2]{#2\dotfill\lr{#1}\\}
-
-
 
 
 

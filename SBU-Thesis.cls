@@ -344,11 +344,17 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 \setlength{\footnotemargin}{5pt}
 \setlength{\skip\footins}{12pt} %تنظیم فاصله متن تا خط زیرنویس
 
+
 % بسته‌ و دستوراتی برای ایجاد لینک‌های رنگی با امکان جهش
 %\usepackage[pagebackref=false,colorlinks,linkcolor=blue,citecolor=blue]{hyperref}
 % چنانچه قصد پرینت گرفتن نوشته خود را دارید، خط بالا را غیرفعال و  از دستور زیر استفاده کنید چون در صورت استفاده از دستور زیر‌‌، 
 % لینک‌ها به رنگ سیاه ظاهر خواهند شد که برای پرینت گرفتن، مناسب‌تر است
 \usepackage[pagebackref=false]{hyperref}
+
+
+\setcounter{tocdepth}{3}% نمایش \subsubsection در فهرست مطالب
+%\part = -1, chapter = 0, \section = 1, subsection = 2, \subsubsection = 3, \paragraph = 4, \subparagraph = 5
+%\setcounter{secnumdepth}{3}% Number \subsubsection این که بیشتر از سه سطح شماره گذاری داشته باشیم خوانایی را کاهش می‌دهد.
 
 \usepackage{bookmark} % برای اضافه کردن لینک‌های کنار pdf و همینطور لینک شدن رفرنس و زیرنویس‌ها
 

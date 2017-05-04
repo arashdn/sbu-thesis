@@ -240,6 +240,70 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 %%%%%%%%%%%%%%%%%%%%%%%
 
 
+
+
+%%%%%%%%%%%%%%%%%%%%%صفحه تایید داوران
+\newcommand{\davaranPage}
+{
+	\begin{center}
+		\thispagestyle{plain}
+		%\topmargin=-30pt
+		\vspace{-10mm}
+		\centerline{{\includegraphics[width=4cm]{logo}}}
+		\vspace{7mm}
+		%nkhComment: University name may be included in logo
+		\ifx\@university\undefined%
+		\relax
+		\else
+		\centerline{\large \bf \@university} 
+		\fi
+		{\large\bfseries\@faculty\space}
+		\vskip 1cm
+		%nkhComment: in case the title is too large
+		\linespread{1.5}
+		
+		\vskip 5mm
+		\large{\@projectLabel\ \ \@subject}
+			\ifx\@field\undefined%
+			\relax
+			\else
+			 - گرایش \@field
+			\fi
+		\\تحت عنوان:
+		\par \@title
+	\end{center}%
+	\vskip 1cm
+	\begin{small}
+		\noindent
+		در تاریخ 
+		\space \space \space\space\space \space \space\space
+		\space \space \space\space\space \space \space\space
+		\space \space \space\space
+		پایان‌نامه دانشجو، 
+		\space \space \space\space\space \space \space\space
+		\space \space \space\space\space \space \space\space
+		\space \space \space\space\space \space \space\space
+		\space \space \space\space\space \space \space\space
+		، توسط کمیته تخصصی داوران مورد بررسی و تصویب نهایی قرار گرفت.
+		\\
+		\par
+		\begin{tabular}{ p{5cm} p{6cm} p{4cm} }
+			1- استاد راهنما اول: & نام و نام خانوادگی & امضا \\
+			2- استاد راهنما دوم: & نام و نام خانوادگی & امضا (در صورت نیاز) \\
+			3- استاد مشاور: & نام و نام خانوادگی & امضا (در صورت نیاز) \\
+			4- استاد داور (داخلی): & نام و نام خانوادگی & امضا \\
+			5- استاد داور (خارجی): & نام و نام خانوادگی & امضا \\
+			6- نماینده تحصیلات تکمیلی: & نام و نام خانوادگی & امضا \\
+		\end{tabular}
+	\end{small}
+	
+
+}
+%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
 \pagenumbering{adadi}
 \let\ol@chapter\@chapter
 \def\@chapter{%
@@ -349,7 +413,7 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 %\usepackage[pagebackref=false,colorlinks,linkcolor=blue,citecolor=blue]{hyperref}
 % چنانچه قصد پرینت گرفتن نوشته خود را دارید، خط بالا را غیرفعال و  از دستور زیر استفاده کنید چون در صورت استفاده از دستور زیر‌‌، 
 % لینک‌ها به رنگ سیاه ظاهر خواهند شد که برای پرینت گرفتن، مناسب‌تر است
-\usepackage[pagebackref=false]{hyperref}
+\usepackage[hidelinks,pagebackref=false]{hyperref}
 
 
 \setcounter{tocdepth}{3}% نمایش \subsubsection در فهرست مطالب

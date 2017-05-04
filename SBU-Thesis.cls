@@ -245,6 +245,7 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 %%%%%%%%%%%%%%%%%%%%%صفحه تایید داوران
 \newcommand{\davaranPage}
 {
+	\newpage
 	\begin{center}
 		\thispagestyle{plain}
 		%\topmargin=-30pt
@@ -301,8 +302,74 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 }
 %%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%%% صفحه واگذاری حقوق
+\newcommand{\rightsPage}
+{
+	\newpage
+	\thispagestyle{plain}
+	\begin{center}
+		\vspace*{\stretch{1}}
+		کلیه حقوق مادی متربت بر نتایج مطالعات،\\
+		ابتکارات و نوآوری‌های ناشی از تحقیق موضوع\\
+		این پایان‌نامه متعلق به دانشگاه شهید بهشتی\\
+		می‌باشد.
+		\vspace*{\stretch{1}}
+	\end{center} 
+	\pagebreak
+	
+}
+%%%%%%%%%%%%%%%%%%
 
 
+%%%%%%%%%%%%%%%%% صفحه کپی رایت
+
+\newcommand{\copyRightPage}
+{
+	\newpage
+	\thispagestyle{plain}
+	\begin{center}
+		\textbf{ 
+			به نام خدا \\
+		}
+
+		\vspace{1cm}
+	\end{center}
+	\noindent
+	\textbf{نام و نام خانوادگی:} \@name \ \@surname \ 
+	\\
+	\textbf{عنوان پایان‌نامه:} \@title
+	\\
+		\ifx\@secondsupervisor\undefined%
+	\textbf{استاد راهنما:}
+	{
+		\@firstsupervisor
+	}
+	\else
+	\textbf{اساتید راهنما:}
+	{\@firstsupervisor{} و \@secondsupervisor}
+	\fi
+	\\
+	\par
+	\noindent
+			اینجانب 
+		\@name \ \@surname \ 
+		تهیه‌کننده \@projectLabel 
+		\space
+		حاضر، خود را ملزم به حفظ امانت‌داری و قدردانی از زحمات سایر محققین و نویسندگان بنابر قانون \lr{Copyright} می‌دانم. بدین وسیله اعلام می‌نمایم که مسئولیت کلیه مطالب درج شده با اینجانب می‌باشد و در صورت استفاده از اشکال، جداول و مطالب سایر منابع، بلافاصله مرجع آن ذکر شده و سایر مطالب از کار تحقیقاتی اینجانب استخراج گشته است و امانت‌داری را به صورت کامل رعایت نموده‌ام. در صورتی که خلاف این مطلب ثابت شود، مسئولیت کلیه عواقب قانونی با شخص اینجانب می‌باشد.
+		
+		
+
+
+	\vspace{.5cm}
+	\begin{flushleft}
+		\begin{tabular}{rr}
+			نام و نام خانوادگی:   & 	\@name{} \@surname \\
+			تاریخ و امضا: & \\
+		\end{tabular}
+	\end{flushleft}
+}
+
+%%%%%%%%%%%%%%%%%%%%
 
 \pagenumbering{adadi}
 \let\ol@chapter\@chapter

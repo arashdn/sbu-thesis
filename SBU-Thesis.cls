@@ -161,7 +161,7 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 		\par
 		\vskip 10mm
 		{\bfseries\by}\par
-		{\Large\bfseries{\large\bfseries \@name\ \ \@surname}}
+		{\Large\bfseries{\Large\bfseries \@name\ \ \@surname}}
 		\par
 		\vskip 10mm
 		\large
@@ -173,13 +173,13 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 			\else
 			\ifx\@secondsupervisor\undefined%
 			استاد راهنما
-			{\Large\bfseries\par
+			{\large\bfseries\par
 				\@firstsupervisor}
 			\else
 			\large
 			اساتید راهنما
 			\par
-			{\Large\bfseries \@firstsupervisor{} و \@secondsupervisor}
+			{\large\bfseries \@firstsupervisor{} و \@secondsupervisor}
 			\fi\fi}
 		\par\large
 		{\ifx\@firstadvisor\undefined%
@@ -188,14 +188,14 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 			\else
 			\ifx\@secondadvisor\undefined%
 			استاد مشاور
-			{\Large\bfseries\par
+			{\large\bfseries\par
 				\@firstadvisor}
 			\else
 			
 			\large
 			استادان مشاور
 			\par
-			{\Large\bfseries\@firstadvisor{} و \@secondadvisor}
+			{\large\bfseries\@firstadvisor{} و \@secondadvisor}
 			\fi\fi}
 		
 		\par
@@ -267,11 +267,11 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 		
 		\vskip 5mm
 		\large{\@projectLabel\ \ \@subject}
-		\ifx\@field\undefined%
-		\relax
-		\else
-		- گرایش \@field
-		\fi
+			\ifx\@field\undefined%
+			\relax
+			\else
+			 - گرایش \@field
+			\fi
 		\\تحت عنوان:
 		\par \@title
 	\end{center}%
@@ -300,7 +300,7 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 		\end{tabular}
 	\end{small}
 	
-	
+
 }
 %%%%%%%%%%%%%%%%%%%%%
 
@@ -333,7 +333,7 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 		\textbf{ 
 			به نام خدا \\
 		}
-		
+
 		\vspace{1cm}
 	\end{center}
 	\noindent
@@ -341,7 +341,7 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 	\\
 	\textbf{عنوان پایان‌نامه:} \@title
 	\\
-	\ifx\@secondsupervisor\undefined%
+		\ifx\@secondsupervisor\undefined%
 	\textbf{استاد راهنما:}
 	{
 		\@firstsupervisor
@@ -353,15 +353,15 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 	\\
 	\par
 	\noindent
-	اینجانب 
-	\@name \ \@surname \ 
-	تهیه‌کننده \@projectLabel 
-	\space
-	حاضر، خود را ملزم به حفظ امانت‌داری و قدردانی از زحمات سایر محققین و نویسندگان بنابر قانون \lr{Copyright} می‌دانم. بدین وسیله اعلام می‌نمایم که مسئولیت کلیه مطالب درج شده با اینجانب می‌باشد و در صورت استفاده از اشکال، جداول و مطالب سایر منابع، بلافاصله مرجع آن ذکر شده و سایر مطالب از کار تحقیقاتی اینجانب استخراج گشته است و امانت‌داری را به صورت کامل رعایت نموده‌ام. در صورتی که خلاف این مطلب ثابت شود، مسئولیت کلیه عواقب قانونی با شخص اینجانب می‌باشد.
-	
-	
-	
-	
+			اینجانب 
+		\@name \ \@surname \ 
+		تهیه‌کننده \@projectLabel 
+		\space
+		حاضر، خود را ملزم به حفظ امانت‌داری و قدردانی از زحمات سایر محققین و نویسندگان بنابر قانون \lr{Copyright} می‌دانم. بدین وسیله اعلام می‌نمایم که مسئولیت کلیه مطالب درج شده با اینجانب می‌باشد و در صورت استفاده از اشکال، جداول و مطالب سایر منابع، بلافاصله مرجع آن ذکر شده و سایر مطالب از کار تحقیقاتی اینجانب استخراج گشته است و امانت‌داری را به صورت کامل رعایت نموده‌ام. در صورتی که خلاف این مطلب ثابت شود، مسئولیت کلیه عواقب قانونی با شخص اینجانب می‌باشد.
+		
+		
+
+
 	\vspace{.5cm}
 	\begin{flushleft}
 		\begin{tabular}{rr}
@@ -385,21 +385,21 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 	\par
 	\noindent
 	\begin{LTR}
-		\lr{
-			\@en-abstract
-		}
-		
-		\vspace{8mm}
-		\par
-		%	\noindent
-		\ifdefined\@latinkeywords
-		{
 			\lr{
-				\textbf{Keywords:} 
-				\@latinkeywords
+			\@en-abstract
 			}
+
+	\vspace{8mm}
+	\par
+%	\noindent
+	\ifdefined\@latinkeywords
+	{
+		\lr{
+		\textbf{Keywords:} 
+		\@latinkeywords
 		}
-		\fi
+	}
+	\fi
 	\end{LTR}
 }
 %%%%%%%%%%%%%%%%
@@ -429,11 +429,11 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 			\bf \lr{\@latintitle} \par}
 		%\baselineskip=.750cm \par
 		%\linespread{1.2}
-		
+
 		\vskip 5mm
 		{\large By}\par
 		\vskip 5mm
-		{\large %\supervisorfont
+		{\large 
 			\rm \bf \Large \lr{\@latinname \; \@latinsurname}}\par
 		
 		\vspace{1.5cm}
@@ -469,14 +469,14 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 			\ifx\@secondlatinsupervisor\undefined%
 			\Large\lr{Supervisor:}
 			\vskip 5mm
-			{\Large\bfseries\par
+			{\large\bfseries\par
 				\lr{\@firstlatinsupervisor}}
 			\else
 			\large
 			\Large\lr{Supervisors:}
 			\vskip 5mm
 			\par
-			{\Large\bfseries \lr{\@firstlatinsupervisor{} and \@secondlatinsupervisor}}
+			{\large\bfseries \lr{\@firstlatinsupervisor{} and \@secondlatinsupervisor}}
 			\fi\fi}
 		\par
 		\vspace{1cm}
@@ -486,9 +486,9 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 			\else\fi
 			\else
 			\ifx\@secondlatinadvisor\undefined%
-			\Large\lr{Advisor:}
+			\large\lr{Advisor:}
 			\vskip 5mm
-			{\Large\bfseries\par
+			{\large\bfseries\par
 				\lr{\@firstlatinadvisor}}
 			\else
 			

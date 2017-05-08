@@ -451,11 +451,11 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 			\lr{MASTER OF SCIENCE}
 			\else
 			\lr{Doctor of Philosophy}
-			\fi
-			in  \@latinsubject 
+			\fi \fi
+%			in  \@latinsubject 
 			%\baselineskip=.750cm
 			%\addtolength{\baselineskip}{-5mm}
-			\fi
+%			\fi
 			\par
 		}
 		

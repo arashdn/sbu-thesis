@@ -613,7 +613,9 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\usepackage[perpage,bottom,hang,flushmargin]{footmisc} % شروع شماره زیرنویس ها از ۱ در هر صفحه و انتقال به پایین
+\usepackage[bottom,hang,flushmargin]{footmisc} % شروع شماره زیرنویس ها از ۱ در هر صفحه و انتقال به پایین
+\usepackage{zref-perpage}
+\zmakeperpage{footnote}
 \setlength{\footnotemargin}{5pt}
 \setlength{\skip\footins}{12pt} %تنظیم فاصله متن تا خط زیرنویس
 

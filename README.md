@@ -1,14 +1,19 @@
 # SBU Thesis Template
 MS Thesis Template with Latex for Shahid Beheshti University (SBU).  
 
-## Usage
-
-
 ## History
+This is version 1.0.0 Beta, created in May 2017
 
-This is the template provided by many other Universities like AUT and others, whos names are preserved in the sources.
+## Installation
+1. Install `IRNazanin` and `IRTitr` Fonts (they are included in Fonts directory)
+2. Install Any LaTeX compiler you prefer (TeX Live is recommended)
+3. Clone/Download the project and start writing
+
+## Contributing
+Any contribution is appreciated. you can always make a pull request.
+
+## Bug Reports
+Please make an Issue for bugs in template, you can also contact my email address
 
 ## License
 GPL v3.
-
-

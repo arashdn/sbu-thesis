@@ -1,28 +1,12 @@
-%%
 %%  This is file `SBU-Thesis.cls',
 %%	by: Arash Dargahi Nobari, arash@dargahi.org
 %%  http://arashdargahi.com
-%%	Ver 0.1, Apr 2017
+%%	Ver 1.0, May 2017
+%% https://github.com/arashdn/sbu-thesis
 
-%% Original Copyright of AUT-Thesis
-
-%%  This is file `AUT-Thesis.cls',
-%%  It is a modification  of Tabriz_thesis of Vahid Damanafshan,
-%%	by: Mahmood Amintoosi, m.amintoosi@gmail.com
-%%  http://profsite.sttu.ac.ir/mamintoosi
-%%	Ver 0.1, Jan 2012
-
-%%  The original file was xepersian-thesis.cls by Vafa Khalighi
-%%   __________________________________
-%%   Copyright © 2011-2012 Vahid Damanafshan
-%%  
-%%   http://damanafshan.tk      
-%%   http://forum.parsilatex.com
-%% 
-%% 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{SBU-Thesis}
-[4/14/2017 v0.1
+[5/9/2017 v0.1
 Persian thesis document class in XeLaTeX for Shahid Beheshti University projects/theses/dissertations]
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions
@@ -47,6 +31,12 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 \def\faculty#1{\gdef\@faculty{#1}}
 \def\subject#1{\gdef\@subject{#1}}
 
+%% Original Copyright of AUT-Thesis
+%%  This is file `AUT-Thesis.cls',
+%%  It is a modification  of Tabriz_thesis of Vahid Damanafshan,
+%%	by: Mahmood Amintoosi, m.amintoosi@gmail.com
+%%  http://profsite.sttu.ac.ir/mamintoosi
+%%	Ver 0.1, Jan 2012
 
 %nkhComment
 \def\reportVersion#1{\gdef\@reportVersion{#1}}

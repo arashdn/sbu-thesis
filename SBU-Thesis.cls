@@ -301,7 +301,7 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 	\thispagestyle{plain}
 	\begin{center}
 		\vspace*{\stretch{1}}
-		کلیه حقوق مادی متربت بر نتایج مطالعات،\\
+		کلیه حقوق مادی مترتب بر نتایج مطالعات،\\
 		ابتکارات و نوآوری‌های ناشی از تحقیق موضوع\\
 		این پایان‌نامه متعلق به دانشگاه شهید بهشتی\\
 		می‌باشد.

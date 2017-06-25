@@ -1,12 +1,12 @@
 %%  This is file `SBU-Thesis.cls',
 %%	by: Arash Dargahi Nobari, arash@dargahi.org
 %%  http://arashdargahi.com
-%%	Ver 1.0, May 2017
+%%	Ver 1.0.1, June 2017
 %% https://github.com/arashdn/sbu-thesis
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{SBU-Thesis}
-[5/9/2017 v0.1
+[6/25/2017 v1.0.1
 Persian thesis document class in XeLaTeX for Shahid Beheshti University projects/theses/dissertations]
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions
@@ -636,6 +636,33 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 \setlatintextfont[Scale=1.15]{IRNazanin}
 \defpersianfont\titlefont[Scale=0.857]{IRTitr}
 
+
+\let\oldtoc\tableofcontents
+\renewcommand{\tableofcontents}
+{
+	\pagestyle{plain}
+	\oldtoc
+	\clearpage
+	\pagestyle{fancy}
+}
+
+\let\oldlistoffigures\listoffigures
+\renewcommand{\listoffigures}
+{
+	\pagestyle{plain}
+	\oldlistoffigures
+	\clearpage
+	\pagestyle{fancy}
+}
+
+\let\oldlistoftables\listoftables
+\renewcommand{\listoftables}
+{
+	\pagestyle{plain}
+	\oldlistoftables
+	\clearpage
+	\pagestyle{fancy}
+}
 
 
 % دستوری برای تغییر نام کلمه «کتاب‌نامه» به «مراجع»

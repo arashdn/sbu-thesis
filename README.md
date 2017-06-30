@@ -2,7 +2,7 @@
 MS Thesis Template with Latex for Shahid Beheshti University (SBU).  
 
 ## History
-This is version 1.0.2, created in June 2017
+This is version 1.0.3, created in June 2017
 
 Change logs are listed in [CHANGELOG.md](CHANGELOG.md)
 

@@ -1,12 +1,12 @@
 %%  This is file `SBU-Thesis.cls',
 %%	by: Arash Dargahi Nobari, arash@dargahi.org
 %%  http://arashdargahi.com
-%%	Ver 1.0.2, June 2017
+%%	Ver 1.0.3, June 2017
 %% https://github.com/arashdn/sbu-thesis
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{SBU-Thesis}
-[6/30/2017 v1.0.2
+[6/30/2017 v1.0.3
 Persian thesis document class in XeLaTeX for Shahid Beheshti University projects/theses/dissertations]
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions
@@ -150,9 +150,10 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 		\fi\fi	
 		\par
 		\vskip 10mm
-		{\bfseries\by}\par
+		{\bfseries\by}%\par
+		\\ \vskip 0.45cm
 		{\Large\bfseries{\Large\bfseries \@name\ \ \@surname}}
-		\par
+		%\par
 		\vskip 10mm
 		\large
 		{
@@ -163,12 +164,13 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 			\else
 			\ifx\@secondsupervisor\undefined%
 			استاد راهنما
-			{\large\bfseries\par
+			\\ \vskip 0.35cm
+			{\large\bfseries
 				\@firstsupervisor}
 			\else
 			\large
 			اساتید راهنما
-			\par
+			\\ \vskip 0.35cm
 			{\large\bfseries \@firstsupervisor{} و \@secondsupervisor}
 			\fi\fi}
 		\par\large
@@ -177,19 +179,22 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 			\else\fi
 			\else
 			\ifx\@secondadvisor\undefined%
+			\vskip 1cm
 			استاد مشاور
-			{\large\bfseries\par
+			\\ \vskip 0.35cm
+			{\large\bfseries
 				\@firstadvisor}
 			\else
 			
 			\large
+			\vskip 1cm
 			استادان مشاور
-			\par
+			\\ \vskip 0.4cm
 			{\large\bfseries\@firstadvisor{} و \@secondadvisor}
 			\fi\fi}
 		
 		\par
-		\vskip 6mm
+		\vskip 10mm
 		%\vfill
 		{\large \@thesisdate}
 		%\vfill

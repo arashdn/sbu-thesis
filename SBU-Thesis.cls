@@ -1,12 +1,12 @@
 %%  This is file `SBU-Thesis.cls',
 %%	by: Arash Dargahi Nobari, arash@dargahi.org
 %%  http://arashdargahi.com
-%%	Ver 1.0.1, June 2017
+%%	Ver 1.0.2, June 2017
 %% https://github.com/arashdn/sbu-thesis
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{SBU-Thesis}
-[6/25/2017 v1.0.1
+[6/30/2017 v1.0.2
 Persian thesis document class in XeLaTeX for Shahid Beheshti University projects/theses/dissertations]
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions
@@ -257,11 +257,11 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 		
 		\vskip 5mm
 		\large{\@projectLabel\ \ \@subject}
-			\ifx\@field\undefined%
-			\relax
-			\else
-			 - گرایش \@field
-			\fi
+		\ifx\@field\undefined%
+		\relax
+		\else
+		- گرایش \@field
+		\fi
 		\\تحت عنوان:
 		\par \@title
 	\end{center}%
@@ -290,7 +290,7 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 		\end{tabular}
 	\end{small}
 	
-
+	
 }
 %%%%%%%%%%%%%%%%%%%%%
 
@@ -323,7 +323,7 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 		\textbf{ 
 			به نام خدا \\
 		}
-
+		
 		\vspace{1cm}
 	\end{center}
 	\noindent
@@ -331,7 +331,7 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 	\\
 	\textbf{عنوان پایان‌نامه:} \@title
 	\\
-		\ifx\@secondsupervisor\undefined%
+	\ifx\@secondsupervisor\undefined%
 	\textbf{استاد راهنما:}
 	{
 		\@firstsupervisor
@@ -343,15 +343,15 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 	\\
 	\par
 	\noindent
-			اینجانب 
-		\@name \ \@surname \ 
-		تهیه‌کننده \@projectLabel 
-		\space
-		حاضر، خود را ملزم به حفظ امانت‌داری و قدردانی از زحمات سایر محققین و نویسندگان بنابر قانون \lr{Copyright} می‌دانم. بدین وسیله اعلام می‌نمایم که مسئولیت کلیه مطالب درج شده با اینجانب می‌باشد و در صورت استفاده از اشکال، جداول و مطالب سایر منابع، بلافاصله مرجع آن ذکر شده و سایر مطالب از کار تحقیقاتی اینجانب استخراج گشته است و امانت‌داری را به صورت کامل رعایت نموده‌ام. در صورتی که خلاف این مطلب ثابت شود، مسئولیت کلیه عواقب قانونی با شخص اینجانب می‌باشد.
-		
-		
-
-
+	اینجانب 
+	\@name \ \@surname \ 
+	تهیه‌کننده \@projectLabel 
+	\space
+	حاضر، خود را ملزم به حفظ امانت‌داری و قدردانی از زحمات سایر محققین و نویسندگان بنابر قانون \lr{Copyright} می‌دانم. بدین وسیله اعلام می‌نمایم که مسئولیت کلیه مطالب درج شده با اینجانب می‌باشد و در صورت استفاده از اشکال، جداول و مطالب سایر منابع، بلافاصله مرجع آن ذکر شده و سایر مطالب از کار تحقیقاتی اینجانب استخراج گشته است و امانت‌داری را به صورت کامل رعایت نموده‌ام. در صورتی که خلاف این مطلب ثابت شود، مسئولیت کلیه عواقب قانونی با شخص اینجانب می‌باشد.
+	
+	
+	
+	
 	\vspace{.5cm}
 	\begin{flushleft}
 		\begin{tabular}{rr}
@@ -375,21 +375,21 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 	\par
 	\noindent
 	\begin{LTR}
-			\lr{
-			\@en-abstract
-			}
-
-	\vspace{8mm}
-	\par
-%	\noindent
-	\ifdefined\@latinkeywords
-	{
 		\lr{
-		\textbf{Keywords:} 
-		\@latinkeywords
+			\@en-abstract
 		}
-	}
-	\fi
+		
+		\vspace{8mm}
+		\par
+		%	\noindent
+		\ifdefined\@latinkeywords
+		{
+			\lr{
+				\textbf{Keywords:} 
+				\@latinkeywords
+			}
+		}
+		\fi
 	\end{LTR}
 }
 %%%%%%%%%%%%%%%%
@@ -419,7 +419,7 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 			\bf \lr{\@latintitle} \par}
 		%\baselineskip=.750cm \par
 		%\linespread{1.2}
-
+		
 		\vskip 5mm
 		{\large By}\par
 		\vskip 5mm
@@ -442,10 +442,10 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 			\else
 			\lr{Doctor of Philosophy}
 			\fi \fi
-%			in  \@latinsubject 
+			%			in  \@latinsubject 
 			%\baselineskip=.750cm
 			%\addtolength{\baselineskip}{-5mm}
-%			\fi
+			%			\fi
 			\par
 		}
 		
@@ -568,7 +568,6 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 
-
 \lhead{}
 % Length to control the \fancyheadoffset and the calculation of \headline
 % simultaneously
@@ -624,7 +623,7 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 \usepackage{bookmark} % برای اضافه کردن لینک‌های کنار pdf و همینطور لینک شدن رفرنس و زیرنویس‌ها
 
 
-
+\usepackage[font=small,labelfont=bf,skip=4pt]{caption}
 \usepackage{graphicx}
 \usepackage{xepersian}
 
@@ -674,8 +673,25 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 \newcommand\englishgloss[2]{#2\dotfill\lr{#1}\\}
 
 
+%\usepackage{etoolbox}
+%\newbool{firstbib}
+%\booltrue{firstbib}
+%\preto{\bibitem}{
+%	\ifbool{firstbib}
+%	{
+%		\thispagestyle{fancy}
+%		\setbool{firstbib}{false}
+%	}{}
+%}
 
-
+\let\oldbibliography\bibliography
+\renewcommand{\bibliography}[1]
+{
+	\linespread{1.2}
+	\addcontentsline{toc}{chapter}{\bibname}
+	\oldbibliography{#1}
+	\linespread{2}
+}
 
 %% Distributable under the LaTeX Project Public License,
 %% version 1.3c or higher (your choice). The latest version of

@@ -4,6 +4,8 @@ MS Thesis Template with Latex for Shahid Beheshti University (SBU).
 ## History
 This is version 1.0.2, created in June 2017
 
+Change logs are listed in [CHANGELOG.md](CHANGELOG.md)
+
 ## Installation
 1. Install `IRNazanin` and `IRTitr` Fonts (they are included in Fonts directory)
 2. Install Any LaTeX compiler you prefer (TeX Live is recommended)

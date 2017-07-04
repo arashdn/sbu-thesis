@@ -14,3 +14,7 @@ All notable changes to this project will be documented in this file.
 
 ## [1.0.3] - 2017-06-30
 - Fixed names space in first page
+
+## [1.0.4] - 2017-07-04
+- Fixed numbering of citations in table of figures and tables
+- Fixed bugs for hyperlink of biblography in Table Of Contents

@@ -1,12 +1,12 @@
 %%  This is file `SBU-Thesis.cls',
 %%	by: Arash Dargahi Nobari, arash@dargahi.org
 %%  http://arashdargahi.com
-%%	Ver 1.0.3, June 2017
+%%	Ver 1.0.4, July 2017
 %% https://github.com/arashdn/sbu-thesis
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{SBU-Thesis}
-[6/30/2017 v1.0.3
+[7/4/2017 v1.0.4
 Persian thesis document class in XeLaTeX for Shahid Beheshti University projects/theses/dissertations]
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions
@@ -689,11 +689,13 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 %	}{}
 %}
 
+\usepackage{notoccite}
+
 \let\oldbibliography\bibliography
 \renewcommand{\bibliography}[1]
 {
 	\linespread{1.2}
-	\addcontentsline{toc}{chapter}{\bibname}
+	\addcontentsline{toc}{chapter}{مراجع}
 	\oldbibliography{#1}
 	\linespread{2}
 }

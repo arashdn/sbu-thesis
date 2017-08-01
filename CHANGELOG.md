@@ -18,3 +18,6 @@ All notable changes to this project will be documented in this file.
 ## [1.0.4] - 2017-07-04
 - Fixed numbering of citations in table of figures and tables
 - Fixed bugs for hyperlink of biblography in Table Of Contents
+
+## [1.0.5] - 2017-08-01
+- Fixed wrong place for page number and title in page header after updating xepersian

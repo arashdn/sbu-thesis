@@ -1,12 +1,12 @@
 %%  This is file `SBU-Thesis.cls',
 %%	by: Arash Dargahi Nobari, arash@dargahi.org
 %%  http://arashdargahi.com
-%%	Ver 1.0.4, July 2017
+%%	Ver 1.0.5, Aug 2017
 %% https://github.com/arashdn/sbu-thesis
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{SBU-Thesis}
-[7/4/2017 v1.0.4
+[8/1/2017 v1.0.5
 Persian thesis document class in XeLaTeX for Shahid Beheshti University projects/theses/dissertations]
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions
@@ -591,7 +591,8 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 \setlength\FHleft{1cm}
 \setlength\FHright{0cm}
 
-\lhead{\thepage} % نمایش شماره صفحه در سمت راست هدر
+\rhead{\thepage} % نمایش شماره صفحه در سمت راست هدر
+\lhead{\leftmark}
 \cfoot{} % نمایش ندادن شماره صفحه در پایین صفحه
 
 % The new definition of headrule that will take into acount the trimming(s)

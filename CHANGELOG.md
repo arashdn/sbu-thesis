@@ -21,3 +21,6 @@ All notable changes to this project will be documented in this file.
 
 ## [1.0.5] - 2017-08-01
 - Fixed wrong place for page number and title in page header after updating xepersian
+
+## [1.0.6] - 2017-08-02
+- Fixed words with non breaking space placing outside of the border

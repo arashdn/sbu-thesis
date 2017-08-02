@@ -1,12 +1,12 @@
 %%  This is file `SBU-Thesis.cls',
 %%	by: Arash Dargahi Nobari, arash@dargahi.org
 %%  http://arashdargahi.com
-%%	Ver 1.0.6, Aug 2017
+%%	Ver 1.0.7, Aug 2017
 %% https://github.com/arashdn/sbu-thesis
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{SBU-Thesis}
-[8/2/2017 v1.0.6
+[8/2/2017 v1.0.7
 Persian thesis document class in XeLaTeX for Shahid Beheshti University projects/theses/dissertations]
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions
@@ -631,7 +631,10 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 
 \usepackage[font=small,labelfont=bf,skip=4pt]{caption}
 \usepackage{graphicx}
-\usepackage[Kashida]{xepersian}
+\usepackage{xepersian}
+
+
+\setlength{\emergencystretch}{4pt} %جلوگیری از نشکستن خطوط
 
 %\usepackage{persian-bib}
 

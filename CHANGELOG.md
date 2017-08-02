@@ -24,3 +24,6 @@ All notable changes to this project will be documented in this file.
 
 ## [1.0.6] - 2017-08-02
 - Fixed words with non breaking space placing outside of the border
+
+## [1.0.7] - 2017-08-02
+- Fixed problems with font

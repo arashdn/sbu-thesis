@@ -1,12 +1,12 @@
 %%  This is file `SBU-Thesis.cls',
 %%	by: Arash Dargahi Nobari, arash@dargahi.org
 %%  http://arashdargahi.com
-%%	Ver 1.0.7, Aug 2017
+%%	Ver 1.0.8, Aug 2017
 %% https://github.com/arashdn/sbu-thesis
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{SBU-Thesis}
-[8/2/2017 v1.0.7
+[8/3/2017 v1.0.8
 Persian thesis document class in XeLaTeX for Shahid Beheshti University projects/theses/dissertations]
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions
@@ -693,7 +693,8 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 %	}{}
 %}
 
-\usepackage{notoccite}
+\usepackage{notoccite} %جلوگیری از شماره‌گزاری تصاویر در فهرست
+\usepackage{cite} % تبدیل ارجاعات به جای چند عدد به محدوده مثلا [10-13]
 
 \let\oldbibliography\bibliography
 \renewcommand{\bibliography}[1]

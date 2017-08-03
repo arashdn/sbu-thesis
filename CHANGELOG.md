@@ -27,3 +27,6 @@ All notable changes to this project will be documented in this file.
 
 ## [1.0.7] - 2017-08-02
 - Fixed problems with font
+
+## [1.0.8] - 2017-08-03
+- Added feature to automatically merge cites

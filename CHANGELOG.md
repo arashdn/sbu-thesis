@@ -30,3 +30,7 @@ All notable changes to this project will be documented in this file.
 
 ## [1.0.8] - 2017-08-03
 - Added feature to automatically merge cites
+
+## [1.0.9] - 2018-12-16
+- Fixed wrong place for page number and title in page header after updating xepersian
+- Added Color package

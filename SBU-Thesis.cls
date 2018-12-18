@@ -1,12 +1,12 @@
 %%  This is file `SBU-Thesis.cls',
 %%	by: Arash Dargahi Nobari, arash@dargahi.org
 %%  http://arashdargahi.com
-%%	Ver 1.0.9, Dec 2018
+%%	Ver 1.1.0, Dec 2018
 %% https://github.com/arashdn/sbu-thesis
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{SBU-Thesis}
-[12/16/2018 v1.0.9
+[12/18/2018 v1.1.0
 Persian thesis document class in XeLaTeX for Shahid Beheshti University projects/theses/dissertations]
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions
@@ -595,6 +595,8 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 \rhead{\leftmark}
 \cfoot{} % نمایش ندادن شماره صفحه در پایین صفحه
 
+\renewcommand{\chaptermark}[1]{\markboth{\MakeUppercase{ #1}}{}} %حذف فصل ۱ از عنوان هدر‌ها
+
 % The new definition of headrule that will take into acount the trimming(s)
 \newbox\FHline
 \setbox\FHline=\hbox{\hsize=\paperwidth%
@@ -628,7 +630,7 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 
 \usepackage{bookmark} % برای اضافه کردن لینک‌های کنار pdf و همینطور لینک شدن رفرنس و زیرنویس‌ها
 
-\usepackage{color}
+\input{config}
 
 \usepackage[font=small,labelfont=bf,skip=4pt]{caption}
 \usepackage{graphicx}

@@ -34,3 +34,8 @@ All notable changes to this project will be documented in this file.
 ## [1.0.9] - 2018-12-16
 - Fixed wrong place for page number and title in page header after updating xepersian
 - Added Color package
+
+## [1.1.0] - 2018-12-18
+- Added config.tex to support additional packages adding before bidi and other customization.
+- Removed chapter number from header 
+- Removed Color package

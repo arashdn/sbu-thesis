@@ -1,12 +1,12 @@
 %%  This is file `SBU-Thesis.cls',
 %%	by: Arash Dargahi Nobari, arash@dargahi.org
 %%  http://arashdargahi.com
-%%	Ver 1.1.0, Dec 2018
+%%	Ver 1.1.1, Dec 2018
 %% https://github.com/arashdn/sbu-thesis
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{SBU-Thesis}
-[12/18/2018 v1.1.0
+[12/23/2018 v1.1.1
 Persian thesis document class in XeLaTeX for Shahid Beheshti University projects/theses/dissertations]
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions
@@ -613,7 +613,7 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 \usepackage[bottom,hang,flushmargin]{footmisc} % شروع شماره زیرنویس ها از ۱ در هر صفحه و انتقال به پایین
 \usepackage{zref-perpage}
 \zmakeperpage{footnote}
-\setlength{\footnotemargin}{5pt}
+%\setlength{\footnotemargin}{5pt} % این دستور باعث ایجاد مشکل در پاورقی‌های دو رقمی می‌شود.
 \setlength{\skip\footins}{12pt} %تنظیم فاصله متن تا خط زیرنویس
 
 

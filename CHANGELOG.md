@@ -39,3 +39,6 @@ All notable changes to this project will be documented in this file.
 - Added config.tex to support additional packages adding before bidi and other customization.
 - Removed chapter number from header 
 - Removed Color package
+
+## [1.1.1] - 2018-12-23
+- Fixed the margin problem with pages having more than 10 footnotes.

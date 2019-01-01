@@ -1,12 +1,12 @@
 %%  This is file `SBU-Thesis.cls',
 %%	by: Arash Dargahi Nobari, arash@dargahi.org
 %%  http://arashdargahi.com
-%%	Ver 1.1.1, Dec 2018
+%%	Ver 2.0.0, Jan 2019
 %% https://github.com/arashdn/sbu-thesis
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{SBU-Thesis}
-[12/23/2018 v1.1.1
+[1/1/2019 v2.0.0
 Persian thesis document class in XeLaTeX for Shahid Beheshti University projects/theses/dissertations]
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions
@@ -30,6 +30,15 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 \def\en-abstract#1{\gdef\@en-abstract{#1}}
 \def\faculty#1{\gdef\@faculty{#1}}
 \def\subject#1{\gdef\@subject{#1}}
+
+
+
+\def\davaranSupervisor#1{\gdef\@davaranSupervisor{#1}}
+\def\davaranSecondSupervisor#1{\gdef\@davaranSecondSupervisor{#1}}
+\def\davaranAdvisor#1{\gdef\@davaranAdvisor{#1}}
+\def\davaranInternal#1{\gdef\@davaranInternal{#1}}
+\def\davaranExternal#1{\gdef\@davaranExternal{#1}}
+\def\davaranAssignee#1{\gdef\@davaranAssignee{#1}}
 
 %% Original Copyright of AUT-Thesis
 %%  This is file `AUT-Thesis.cls',
@@ -276,22 +285,36 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 		در تاریخ 
 		\space \space \space\space\space \space \space\space
 		\space \space \space\space\space \space \space\space
-		\space \space \space\space
+		\space \space \space\space\space \space \space\space
 		پایان‌نامه دانشجو، 
-		\space \space \space\space\space \space \space\space
-		\space \space \space\space\space \space \space\space
-		\space \space \space\space\space \space \space\space
-		\space \space \space\space\space \space \space\space
+		\@name \ \@surname
 		، توسط کمیته تخصصی داوران مورد بررسی و تصویب نهایی قرار گرفت.
 		\\
 		\par
-		\begin{tabular}{ p{5cm} p{6cm} p{4cm} }
-			1- استاد راهنما اول: & نام و نام خانوادگی & امضا \\
-			2- استاد راهنما دوم: & نام و نام خانوادگی & امضا (در صورت نیاز) \\
-			3- استاد مشاور: & نام و نام خانوادگی & امضا (در صورت نیاز) \\
-			4- استاد داور (داخلی): & نام و نام خانوادگی & امضا \\
-			5- استاد داور (خارجی): & نام و نام خانوادگی & امضا \\
-			6- نماینده تحصیلات تکمیلی: & نام و نام خانوادگی & امضا \\
+		\vfill
+		\newcounter{dc}
+		\setcounter{dc}{1}
+		\newcommand{\amp}{&}
+		\begin{tabular}{ p{4.5cm} p{7.5cm} p{2.5cm} }
+   		 \ifdefined\@davaranSupervisor
+		 		\arabic{dc}- استاد راهنما اول: \amp \@davaranSupervisor \amp امضا \\ \addtocounter{dc}{1}
+		 \fi
+		 \ifdefined\@davaranSecondSupervisor
+			 \arabic{dc}- استاد راهنما دوم: \amp \@davaranSecondSupervisor \amp امضا \\ \addtocounter{dc}{1}
+		 \fi
+		 \ifdefined\@davaranAdvisor
+		    	\arabic{dc}- استاد مشاور: \amp \@davaranAdvisor \amp امضا \\ \addtocounter{dc}{1}
+		 \fi
+		 \ifdefined\@davaranInternal
+		     \arabic{dc}- استاد داور (داخلی): \amp \@davaranInternal \amp امضا \\ \addtocounter{dc}{1}
+		 \fi
+	 	 \ifdefined\@davaranExternal
+		       \arabic{dc}- استاد داور (خارجی): \amp \@davaranExternal \amp امضا \\ \addtocounter{dc}{1}
+		 \fi
+		 \ifdefined\@davaranAssignee
+		 		\arabic{dc}- نماینده تحصیلات تکمیلی: \amp \@davaranAssignee \amp امضا \\ \addtocounter{dc}{1}
+		 \fi
+		 \vspace{2cm}
 		\end{tabular}
 	\end{small}
 	

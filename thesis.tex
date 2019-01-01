@@ -4,6 +4,7 @@
 % برای گزارش سمینار mscS  و برای پایان‌نامه ,msc را انتخاب کنید
 \documentclass[oneside,openany,msc]{SBU-Thesis}
 
+% برای وارد کردن بسته‌هایی که نیاز است قبل از bidi وارد شوند، آنها را در فایل confix.tex قرار دهید. سایر بسته‌های مورد نیاز را در اینجا می‌توانید وارد کنید:
 
 \begin{document}
 	%عنوان پایان‌نامه
@@ -39,6 +40,13 @@
 	%نام دانشگاه
 	\university{دانشگاه شهید بهشتی}
 	
+	%اسامی برای صفحات داوران: در هر مورد، در صورت عدم وجود، کل خط را حذف کنید
+	\davaranSupervisor{نام و نام‌خانوادگی}
+	\davaranSecondSupervisor{نام و نام‌خانوادگی}
+	\davaranAdvisor{نام و نام‌خانوادگی}
+	\davaranInternal{نام و نام‌خانوادگی}
+	\davaranExternal{نام و نام‌خانوادگی}
+	\davaranAssignee{نام و نام‌خانوادگی}
 	%مقادیر انگلیسی برای صفحه آخر
 	\latinuniversity{Shahid Beheshti University}
 	\latinfaculty{Faculty of Computer Science \& Engineering}
@@ -119,6 +127,31 @@
 %\onehalfspacing
 \bibliographystyle{ieeetr-fa}%{chicago-fa}%{plainnat-fa}%
 \bibliography{thesis}
+
+
+%%%%%%%%%% نمونه‌ی واژه‌نلمه تک ستونه ٪٪٪٪٪٪٪٪٪٪
+\baselineskip=.6cm
+
+\chapter*{واژه‌نامه  انگلیسی به  فارسی}\markboth{واژه‌نامه  انگلیسی به  فارسی}{واژه‌نامه  انگلیسی به  فارسی}
+\thispagestyle{fancy}
+\addcontentsline{toc}{chapter}{واژه‌نامه  انگلیسی به  فارسی}
+\noindent
+\englishgloss{Word}{کلمه}
+\englishgloss{Word 2}{کلمه ۲}
+\englishgloss{Word 3}{کلمه ۳}
+
+
+\chapter*{واژه‌نامه فارسی به انگلیسی}\markboth{واژه‌نامه فارسی به انگلیسی}{واژه‌نامه فارسی به انگلیسی}
+\addcontentsline{toc}{chapter}{واژه‌نامه فارسی به انگلیسی}
+\thispagestyle{fancy}
+\noindent
+\persiangloss{کلمه ۱}{word 1}
+\persiangloss{کلمه ۲}{word 2}
+\persiangloss{کلمه ۳}{word 3}
+
+\baselineskip=1cm
+%%%%%%%%%%%%%%%%%%%%%%%%%
+
 
 % چکیده به انگلیسی
 \en-abstract

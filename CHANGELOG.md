@@ -42,3 +42,8 @@ All notable changes to this project will be documented in this file.
 
 ## [1.1.1] - 2018-12-23
 - Fixed the margin problem with pages having more than 10 footnotes.
+
+## [2.0.0] - 2019-01-01
+- Davaran Page re-designed supporting manual names.
+- Added Comment About config.tex file.
+- Added A dictionary sample

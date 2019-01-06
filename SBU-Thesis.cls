@@ -1,12 +1,12 @@
 %%  This is file `SBU-Thesis.cls',
 %%	by: Arash Dargahi Nobari, arash@dargahi.org
 %%  http://arashdargahi.com
-%%	Ver 2.0.0, Jan 2019
+%%	Ver 2.0.1, Jan 2019
 %% https://github.com/arashdn/sbu-thesis
 
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{SBU-Thesis}
-[1/1/2019 v2.0.0
+[1/6/2019 v2.0.1
 Persian thesis document class in XeLaTeX for Shahid Beheshti University projects/theses/dissertations]
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{book}}
 \ProcessOptions
@@ -39,6 +39,7 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 \def\davaranInternal#1{\gdef\@davaranInternal{#1}}
 \def\davaranExternal#1{\gdef\@davaranExternal{#1}}
 \def\davaranAssignee#1{\gdef\@davaranAssignee{#1}}
+\def\davaranDate#1{\gdef\@davaranDate{#1}}
 
 %% Original Copyright of AUT-Thesis
 %%  This is file `AUT-Thesis.cls',
@@ -283,9 +284,13 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 	\begin{small}
 		\noindent
 		در تاریخ 
+		 \ifdefined\@davaranDate
+		 \@davaranDate \space
+		 \else
 		\space \space \space\space\space \space \space\space
 		\space \space \space\space\space \space \space\space
 		\space \space \space\space\space \space \space\space
+		\fi
 		پایان‌نامه دانشجو، 
 		\@name \ \@surname
 		، توسط کمیته تخصصی داوران مورد بررسی و تصویب نهایی قرار گرفت.
@@ -295,7 +300,7 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 		\newcounter{dc}
 		\setcounter{dc}{1}
 		\newcommand{\amp}{&}
-		\begin{tabular}{ p{4.5cm} p{7.5cm} p{2.5cm} }
+		\begin{tabular}{ p{4.5cm} p{7cm} p{3.5cm}}
    		 \ifdefined\@davaranSupervisor
 		 		\arabic{dc}- استاد راهنما اول: \amp \@davaranSupervisor \amp امضا \\ \addtocounter{dc}{1}
 		 \fi
@@ -314,7 +319,7 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 		 \ifdefined\@davaranAssignee
 		 		\arabic{dc}- نماینده تحصیلات تکمیلی: \amp \@davaranAssignee \amp امضا \\ \addtocounter{dc}{1}
 		 \fi
-		 \vspace{2cm}
+		 \vspace{1.8cm}
 		\end{tabular}
 	\end{small}
 	
@@ -701,6 +706,10 @@ Persian thesis document class in XeLaTeX for Shahid Beheshti University projects
 
 % دستوری برای تغییر نام کلمه «کتاب‌نامه» به «مراجع»
 \renewcommand{\bibname}{مراجع}
+
+\renewcommand\listfigurename{فهرست شکل‌ها}
+%\renewcommand\listtablename{فهرست جدول‌ها}
+
 %\renewcommand{\bibname}{\normalsize \begin{center} مراجع \end{center}}
 % دستوری برای تعریف واژه‌نامه انگلیسی به فارسی
 \newcommand\persiangloss[2]{#1\dotfill\lr{#2}\\}

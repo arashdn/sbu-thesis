@@ -47,3 +47,8 @@ All notable changes to this project will be documented in this file.
 - Davaran Page re-designed supporting manual names.
 - Added Comment About config.tex file.
 - Added A dictionary sample
+
+## [2.0.1] - 2019-01-06
+- Fixed Page numbers on dictioany.
+- Changed name of table of figures.
+- optimized signature place and date at Davaran Page.
